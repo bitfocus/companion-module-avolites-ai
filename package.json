@@ -1,12 +1,12 @@
 {
 	"name": "avolites-ai",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"api_version": "1.0.0",
 	"description": "Avolites AI module",
 	"keywords": [
 		"Vision mixer",
-    "Media Server",
-    "Software",
+		"Media Server",
+		"Software",
 		"Generic"
 	],
 	"manufacturer": "Avolites",

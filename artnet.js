@@ -77,7 +77,6 @@ instance.prototype.CHOICES_CHOKE = [
 instance.prototype.init = function() {
 	var self = this;
 
-	debug = self.debug;
 	log = self.log;
 
 	self.status(self.STATE_UNKNOWN);
@@ -175,18 +174,18 @@ instance.prototype.config_fields = function () {
 	var self = this;
 	var fields = [
 		{
-			type: 'text',
-			id: 'info',
-			width: 12,
+			type:  'text',
+			id:    'info',
+			width:  12,
 			label: 'Information',
-			value: 'This module controls the avolites AI server thru artnet, created by Nijs Jonas'
+			value: 'This module controls the avolites AI server thru artnet'
 		},
 		{
-			type: 'textinput',
-			id: 'host',
+			type:  'textinput',
+			id:    'host',
 			label: 'AI server IP adress',
-			width: 6,
-			regex: self.REGEX_IP
+			width:  6,
+			regex:  self.REGEX_IP
 		}
 	];
 
@@ -251,22 +250,22 @@ instance.prototype.actions = function(system) {
 			label:'File',
 			options: [
 				{
-					  type: 'number',
-					  label: 'Directory (0 -> 255)',
-					  id: 'Directoryid',
-					  min: 0,
-					  max: 255,
-					  default: 0,
-					  required: true
+					type: 'number',
+					label: 'Directory (0 -> 255)',
+					id: 'Directoryid',
+					min: 0,
+					max: 255,
+					default: 0,
+					required: true
 				},
 				{
-					  type: 'number',
-					  label: 'File (0 -> 255)',
-					  id: 'Fileid',
-					  min: 0,
-					  max: 255,
-					  default: 1,
-					  required: true
+					type: 'number',
+					label: 'File (0 -> 255)',
+					id: 'Fileid',
+					min: 0,
+					max: 255,
+					default: 1,
+					required: true
 				},
 				{
 					type: 'dropdown',
@@ -324,13 +323,13 @@ instance.prototype.actions = function(system) {
 			label:'Intensity',
 			options: [
 				{
-					  type: 'number',
-					  label: 'Intensity (0 -> 100)',
-					  id: 'Intensityid',
-					  min: 0,
-					  max: 100,
-					  default: 100,
-					  required: true
+						type: 'number',
+						label: 'Intensity (0 -> 100)',
+						id: 'Intensityid',
+						min: 0,
+						max: 100,
+						default: 100,
+						required: true
 				},
 				{
 					type: 'dropdown',
@@ -352,13 +351,13 @@ instance.prototype.actions = function(system) {
 			label:'Speed',
 			options: [
 				{
-					  type: 'number',
-					  label: 'Speed (1 -> 100)',
-					  id: 'Speedid',
-					  min: 1,
-					  max: 100,
-					  default: 100,
-					  required: true
+						type: 'number',
+						label: 'Speed (1 -> 100)',
+						id: 'Speedid',
+						min: 1,
+						max: 100,
+						default: 100,
+						required: true
 				},
 				{
 					type: 'dropdown',
@@ -373,13 +372,13 @@ instance.prototype.actions = function(system) {
 			label:'Strobe',
 			options: [
 				{
-					  type: 'number',
-					  label: 'Strobe (0 -> 100)',
-					  id: 'Strobeid',
-					  min: 0,
-					  max: 100,
-					  default: 100,
-					  required: true
+						type: 'number',
+						label: 'Strobe (0 -> 100)',
+						id: 'Strobeid',
+						min: 0,
+						max: 100,
+						default: 100,
+						required: true
 				},
 				{
 					type: 'dropdown',
@@ -394,13 +393,13 @@ instance.prototype.actions = function(system) {
 			label:'Volume',
 			options: [
 				{
-					  type: 'number',
-					  label: 'Volume (0 -> 100)',
-					  id: 'Volumeid',
-					  min: 0,
-					  max: 100,
-					  default: 100,
-					  required: true
+						type: 'number',
+						label: 'Volume (0 -> 100)',
+						id: 'Volumeid',
+						min: 0,
+						max: 100,
+						default: 100,
+						required: true
 				},
 				{
 					type: 'dropdown',
@@ -430,7 +429,7 @@ instance.prototype.actions = function(system) {
 			]
 		}
 	});
-}	
+}
 instance.prototype.init_presets = function () {
 	var self = this;
 	var presets = [];
@@ -444,11 +443,11 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,255,0)
 		},
-		actions: [{	
-			action: 'Play', 
+		actions: [{
+			action: 'Play',
 			options: {
 				playmodes: '0',
-				layers_play: '1' 
+				layers_play: '1'
 			}
 		}]
 	});
@@ -462,11 +461,11 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,255,0)
 		},
-		actions: [{	
-			action: 'Play', 
+		actions: [{
+			action: 'Play',
 			options: {
 				playmodes: '1',
-				layers_play: '1' 
+				layers_play: '1'
 			}
 		}]
 	});
@@ -480,11 +479,11 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,255,0)
 		},
-		actions: [{	
-			action: 'Play', 
+		actions: [{
+			action: 'Play',
 			options: {
 				playmodes: '2',
-				layers_play: '1' 
+				layers_play: '1'
 			}
 		}]
 	});
@@ -498,10 +497,10 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,0,0)
 		},
-		actions: [{	
-			action: 'Stop', 
+		actions: [{
+			action: 'Stop',
 			options: {
-				layers_play: '1' 
+				layers_play: '1'
 			}
 		}]
 	});
@@ -515,10 +514,10 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,0,0)
 		},
-		actions: [{	
-			action: 'Pause', 
+		actions: [{
+			action: 'Pause',
 			options: {
-				layers_play: '1' 
+				layers_play: '1'
 			}
 		}]
 	});
@@ -532,11 +531,11 @@ instance.prototype.init_presets = function () {
 		color: self.rgb(0,0,0),
 		bgcolor: self.rgb(255,255,0)
 	},
-	actions: [{	
-		action: 'Play', 
+	actions: [{
+		action: 'Play',
 		options: {
 			playmodes: '0',
-			layers_play: '2' 
+			layers_play: '2'
 		}
 	}]
 	});
@@ -550,11 +549,11 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,255,0)
 		},
-		actions: [{	
-			action: 'Play', 
+		actions: [{
+			action: 'Play',
 			options: {
 				playmodes: '1',
-				layers_play: '2' 
+				layers_play: '2'
 			}
 		}]
 	});
@@ -568,11 +567,11 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,255,0)
 		},
-		actions: [{	
-			action: 'Play', 
+		actions: [{
+			action: 'Play',
 			options: {
 				playmodes: '2',
-				layers_play: '2' 
+				layers_play: '2'
 			}
 		}]
 	});
@@ -586,10 +585,10 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,0,0)
 		},
-		actions: [{	
-			action: 'Stop', 
+		actions: [{
+			action: 'Stop',
 			options: {
-				layers_play: '2' 
+				layers_play: '2'
 			}
 		}]
 	});
@@ -603,10 +602,10 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,0,0)
 		},
-		actions: [{	
-			action: 'Pause', 
+		actions: [{
+			action: 'Pause',
 			options: {
-				layers_play: '2' 
+				layers_play: '2'
 			}
 		}]
 	});
@@ -620,11 +619,11 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,255,0)
 		},
-		actions: [{	
-			action: 'Play', 
+		actions: [{
+			action: 'Play',
 			options: {
 				playmodes: '0',
-				layers_play: '3' 
+				layers_play: '3'
 			}
 		}]
 	});
@@ -638,11 +637,11 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,255,0)
 		},
-		actions: [{	
-			action: 'Play', 
+		actions: [{
+			action: 'Play',
 			options: {
 				playmodes: '1',
-				layers_play: '3' 
+				layers_play: '3'
 			}
 		}]
 	});
@@ -656,11 +655,11 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,255,0)
 		},
-		actions: [{	
-			action: 'Play', 
+		actions: [{
+			action: 'Play',
 			options: {
 				playmodes: '2',
-				layers_play: '3' 
+				layers_play: '3'
 			}
 		}]
 	});
@@ -674,10 +673,10 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,0,0)
 		},
-		actions: [{	
-			action: 'Stop', 
+		actions: [{
+			action: 'Stop',
 			options: {
-				layers_play: '3' 
+				layers_play: '3'
 			}
 		}]
 	});
@@ -691,10 +690,10 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,0,0)
 		},
-		actions: [{	
-			action: 'Pause', 
+		actions: [{
+			action: 'Pause',
 			options: {
-				layers_play: '3' 
+				layers_play: '3'
 			}
 		}]
 	});
@@ -708,11 +707,11 @@ instance.prototype.init_presets = function () {
 		color: self.rgb(0,0,0),
 		bgcolor: self.rgb(255,255,0)
 	},
-	actions: [{	
-		action: 'Play', 
+	actions: [{
+		action: 'Play',
 		options: {
 			playmodes: '0',
-			layers_play: '4' 
+			layers_play: '4'
 		}
 	}]
 	});
@@ -726,11 +725,11 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,255,0)
 		},
-		actions: [{	
-			action: 'Play', 
+		actions: [{
+			action: 'Play',
 			options: {
 				playmodes: '1',
-				layers_play: '4' 
+				layers_play: '4'
 			}
 		}]
 	});
@@ -744,11 +743,11 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,255,0)
 		},
-		actions: [{	
-			action: 'Play', 
+		actions: [{
+			action: 'Play',
 			options: {
 				playmodes: '2',
-				layers_play: '4' 
+				layers_play: '4'
 			}
 		}]
 	});
@@ -762,10 +761,10 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,0,0)
 		},
-		actions: [{	
-			action: 'Stop', 
+		actions: [{
+			action: 'Stop',
 			options: {
-				layers_play: '4' 
+				layers_play: '4'
 			}
 		}]
 	});
@@ -779,10 +778,10 @@ instance.prototype.init_presets = function () {
 			color: self.rgb(0,0,0),
 			bgcolor: self.rgb(255,0,0)
 		},
-		actions: [{	
-			action: 'Pause', 
+		actions: [{
+			action: 'Pause',
 			options: {
-				layers_play: '4' 
+				layers_play: '4'
 			}
 		}]
 	});
@@ -792,8 +791,7 @@ instance.prototype.action = function(action) {
 	var self = this;
 	var id = action.action;
 
-	var cmd;
-	switch (action.action) {
+	switch (id) {
 		case 'Play':
 			if (self.client !== undefined) {
 				if(action.options.layers_play == "1") {
@@ -820,6 +818,7 @@ instance.prototype.action = function(action) {
 				self.client.send(self.data);
 			}
 			break;
+
 		case 'Stop':
 			if(action.options.layers_stop == "1") {
 				dmxadress = 6;
@@ -837,6 +836,7 @@ instance.prototype.action = function(action) {
 				self.data[dmxadress] = 6;
 				self.client.send(self.data);
 			}
+			break;
 		case 'Pause':
 			if(action.options.layers_pause == "1") {
 				dmxadress = 6;
@@ -855,6 +855,7 @@ instance.prototype.action = function(action) {
 				self.client.send(self.data);
 			}
 			break;
+
 		case 'Intensity':
 			if(action.options.layers_int == "1") {
 				myint = action.options.Intensityid * 2.55;
@@ -900,6 +901,7 @@ instance.prototype.action = function(action) {
 				self.client.send(self.data);
 			}
 			break;
+
 		case 'Speed':
 			if(action.options.layers_spd == "1") {
 				dmxadress = 7;
@@ -920,6 +922,7 @@ instance.prototype.action = function(action) {
 				self.client.send(self.data);
 			}
 			break;
+
 		case 'Volume':
 			if(action.options.layers_vol == "1") {
 				dmxadress = 88;
@@ -940,6 +943,7 @@ instance.prototype.action = function(action) {
 				self.client.send(self.data);
 			}
 			break;
+
 		case 'Strobe':
 			if(action.options.layers_str == "1") {
 				dmxadress = 26;
@@ -960,6 +964,7 @@ instance.prototype.action = function(action) {
 				self.client.send(self.data);
 			}
 			break;
+
 		case 'File':
 			if(action.options.layers_file == "1")  {
 				dmxadress = 0;
@@ -979,6 +984,7 @@ instance.prototype.action = function(action) {
 				self.client.send(self.data);
 			}
 			break;
+			
 		case 'Color':
 			if(action.options.layers_col == "1") {
 				dmxadress = 23;
