@@ -340,7 +340,7 @@ instance.prototype.actions = function(system) {
 				},
 				{
 					type: 'dropdown',
-					label: 'Layer: ',
+					label: 'Other layers: ',
 					id: 'choke',
 					default: '0',
 					choices: self.CHOICES_CHOKE
