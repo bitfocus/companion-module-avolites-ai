@@ -11,7 +11,7 @@
 	"manufacturer": "Avolites",
 	"product": "AI",
 	"shortname": "ai",
-	"homepage": "https://www.avolites.com/",
+	"homepage": "https://github.com/bitfocus/companion-module-avolites-ai#readme",
 	"main": "artnet.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -20,5 +20,12 @@
 	"license": "MIT",
 	"dependencies": {
 		"artnet-node": "haakonnessjoen/artnet-node#ee6273d"
+	},
+	"bugs": {
+		"url": "https://github.com/bitfocus/companion-module-avolites-ai/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bitfocus/companion-module-avolites-ai.git"
 	}
 }
